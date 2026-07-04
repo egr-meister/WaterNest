@@ -64,7 +64,11 @@ jobs:
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
+          # Prepend a newline first: Expo's generated gradle.properties may not
+          # end with one, and `>>` would otherwise glue our first property onto
+          # the last existing line, losing WATERNEST_STORE_FILE.
           {
+            echo ""
             echo "WATERNEST_STORE_FILE=keystore/waternest-release-key.p12"
             echo "WATERNEST_STORE_PASSWORD=$ANDROID_KEYSTORE_PASSWORD"
             echo "WATERNEST_KEY_ALIAS=$ANDROID_KEY_ALIAS"

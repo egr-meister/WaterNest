@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "WaterNest",
+    "slug": "waternest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "waternest",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FCF7EE"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.waternest.app",
+      "versionCode": 1,
+      "compileSdkVersion": 35,
+      "targetSdkVersion": 35,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FCF7EE"
+      },
+      "permissions": [],
+      "blockedPermissions": [
+        "android.permission.INTERNET"
+      ]
+    },
+    "androidStatusBar": {
+      "translucent": false
+    },
+    "plugins": [],
+    "extra": {}
+  }
+}
